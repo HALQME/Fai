@@ -8,24 +8,21 @@
 import FoundationModels
 
 struct ToolsService {
-    let aiTools = Extensions(tools: [])
+    let tools: [Extension] = [
+
+    ]
 
     func searchTool(named name: String) -> [any Tool] {
-        return self.aiTools.tools.filter { $0.name == name }.map { $0.tool }
+        return self.tools.filter { $0.name == name }.map { $0.tool }
     }
 
     func listTools() -> [String] {
-        return self.aiTools.tools.map { $0.name }.sorted()
+        return self.tools.map { $0.name }.sorted()
     }
 
     func getTools() -> [any Tool] {
-        return self.aiTools.tools.map { $0.tool }
+        return self.tools.map { $0.tool }
     }
-}
-
-// ツール一覧の型
-struct Extensions {
-    let tools: [Extension]
 }
 
 struct Extension {

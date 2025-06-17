@@ -61,9 +61,9 @@ struct StatusInfo: Codable {
 
     var statusSummary: String {
         if isDefaultModelAvailable {
-            return "✅ Default model is available"
+            return "󰄳 Default model is available"
         } else {
-            return "❌ Default model is not available"
+            return "󰚽 Default model is not available"
         }
     }
 

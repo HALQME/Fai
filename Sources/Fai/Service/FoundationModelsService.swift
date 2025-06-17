@@ -201,12 +201,12 @@ struct ModelAvailabilityInfo {
 
         switch defaultModel.availability {
         case .available:
-            result += "✅ Default model is available\n"
+            result += "󰄳 Default model is available\n"
             result += "Number of supported languages: \(defaultModel.supportedLanguages.count)\n"
-            result += "Content tagging model: \(isContentTaggingAvailable ? "✅" : "❌")\n"
+            result += "Content tagging model: \(isContentTaggingAvailable ? "󰄳 " : "󰚽 ")\n"
 
         case .unavailable(let reason):
-            result += "❌ Default model is not available\n"
+            result += "󰚽  Default model is not available\n"
             switch reason {
             case .deviceNotEligible:
                 result += "Reason: Device is not eligible for Apple Intelligence\n"

@@ -24,6 +24,7 @@ struct Fai: AsyncParsableCommand {
         subcommands: [
             ChatCommand.self,
             GenerateCommand.self,
+            GitCommand.self,
             StatusCommand.self,
         ],
         defaultSubcommand: StatusCommand.self
