@@ -1,0 +1,22 @@
+{
+  "configurations": [
+    {
+      "type": "swift",
+      "request": "launch",
+      "args": [],
+      "cwd": "${workspaceFolder:Fai}",
+      "name": "Debug Fai",
+      "program": "${workspaceFolder:Fai}/.build/debug/Fai",
+      "preLaunchTask": "swift: Build Debug Fai"
+    },
+    {
+      "type": "swift",
+      "request": "launch",
+      "args": [],
+      "cwd": "${workspaceFolder:Fai}",
+      "name": "Release Fai",
+      "program": "${workspaceFolder:Fai}/.build/release/Fai",
+      "preLaunchTask": "swift: Build Release Fai"
+    }
+  ]
+}
