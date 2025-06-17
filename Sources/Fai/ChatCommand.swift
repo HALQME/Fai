@@ -148,7 +148,7 @@ struct ChatCommand: AsyncParsableCommand {
             logger.debug("Starting Foundation Models processing...")
         }
 
-        print("\n⏳ Fai is thinking...", terminator: "")
+        print("\n Fai: Generating...", terminator: "")
         fflush(stdout)
 
         // Clear loading message before printing actual response
@@ -158,7 +158,10 @@ struct ChatCommand: AsyncParsableCommand {
         fflush(stdout)
 
         if stream {
-            var currentOutput = "\n Fai: "
+
+            var currentOutput = ""
+
+            print("\r\n Fai", terminator: ": ")
 
             // Always use the main service (verbose logging is now handled internally)
             let _ = try await service.streamResponse(
