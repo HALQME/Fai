@@ -128,8 +128,8 @@ final class FoundationModelsService {
         for try await partialResponse in stream {
             partialCount += 1
             logger.debug(
-                " Received partial response #\(partialCount) (length: \(partialResponse.count))")
-            onPartialUpdate(partialResponse)
+                " Received partial response #\(partialCount) (length: \(partialResponse.content.count))")
+            onPartialUpdate(partialResponse.content)
         }
 
         let finalResponse = try await stream.collect()
